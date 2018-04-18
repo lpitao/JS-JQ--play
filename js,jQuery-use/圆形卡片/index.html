@@ -1,0 +1,141 @@
+﻿<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>jQuery卡牌滑动切换代码 - 站长素材</title>
+
+<script src="js/jquery.min.js"></script>
+
+<style>
+html, body{
+    height: 100%;
+    padding: 0;
+    margin: 0;
+    text-align: center;
+}
+.title{
+    font-weight: 700;
+    font-size: 55px;
+    margin-bottom: 10px;
+    color: #333;
+}
+.description{
+    font-size: 21px;
+    font-weight: 400;
+    color: #888;
+}
+.bold{
+    font-weight: 700;
+}
+.slider{
+    padding: 50px 0;
+}
+.slider-origin{
+    background-color: #bd2cbd;
+    border-radius: 50%;
+    /*margin-top: 20%;*/
+    display: inline-block;
+    position: relative;
+}
+.slider-inner{
+    display: inline-block;
+}
+.slider-item{
+    width: 74px;
+    height: 100px;
+    background-color: rgba(128,0,128,0.4);
+    box-shadow: 0 0 3px 1px rgba(0,0,0,0.1);
+    border-radius: 3px;
+    position: absolute;
+    bottom: 200%;
+    left: 50%;
+    margin-left: -37px;
+		cursor: pointer;
+    
+    transform-origin: center 175%;
+    -webkit-transform-origin: center 175%;
+    -ms-transform-origin: center 175%;
+    -moz-transform-origin: center 175%;
+    
+    -webkit-transition: -webkit-transform 0.5s;
+    
+    transition: -webkit-transform 0.5s;
+    
+    transition: transform 0.5s;
+    
+    transition: transform 0.5s, -webkit-transform 0.5s;
+    -webkit-transition: transform 0.5s;
+    -ms-transition: transform 0.5s;
+    -moz-transition: transform 0.5s;
+
+    text-align: left;
+    color: #fff;
+    padding: 7px;
+    box-sizing: border-box;
+
+    -moz-user-select: -moz-none;
+   -webkit-user-select: none;
+
+   /*
+     Introduced in IE 10.
+     See http://ie.microsoft.com/testdrive/HTML5/msUserSelect/
+   */
+   -ms-user-select: none;
+   user-select: none;
+}
+.slider-item.active{
+    background-color: purple;
+		cursor: default;
+}
+.slider-item:not(.active):hover{
+	background-color: #540554;
+}</style>
+</head>
+<body>
+
+<div class="guid">
+    <h1 class="title">圆形滑块</h1>
+</div>
+
+<div class="slider">
+    <div class="slider-inner">
+        <div class="slider-origin">
+            <div class="slider-item">1</div>
+            <div class="slider-item">2</div>
+            <div class="slider-item">3</div>
+            <div class="slider-item">4</div>
+            <div class="slider-item">5</div>
+            <div class="slider-item">6</div>
+            <div class="slider-item">7</div>
+            <div class="slider-item">8</div>
+            <div class="slider-item">9</div>
+            <div class="slider-item">10</div>
+            <div class="slider-item">11</div>
+            <div class="slider-item">12</div>
+            <div class="slider-item">13</div>
+            <div class="slider-item">14</div>
+            <div class="slider-item">15</div>
+            <div class="slider-item">16</div>
+            <div class="slider-item">17</div>
+            <div class="slider-item">18</div>
+            <div class="slider-item">19</div>
+            <div class="slider-item">20</div>
+            <div class="slider-item">21</div>
+            <div class="slider-item">22</div>
+            <div class="slider-item">23</div>
+            <div class="slider-item">24</div>
+            <div class="slider-item">25</div>
+            <div class="slider-item">26</div>
+            <div class="slider-item">27</div>
+            <div class="slider-item">28</div>
+            <div class="slider-item">29</div>
+            <div class="slider-item">30</div>
+        </div>
+    </div>
+</div>
+
+<script type="text/javascript" src="js/circle_slide.js">
+	
+</script>
+</body>
+</html>

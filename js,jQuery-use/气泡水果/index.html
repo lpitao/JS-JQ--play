@@ -1,0 +1,59 @@
+﻿<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>jQuery橙汁水汽泡动画特效 - 站长素材</title>
+
+<script src="js/jquery.min.js"></script>
+
+<style>
+body {
+	background-color: #f98033;
+}
+
+.soda {
+	position: fixed;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	perspective: 50vw;
+	transform: translateZ(-99999px);
+	transform-style: preserve-3d;
+}
+
+.bubble {
+	position: absolute;
+	width: 50px;
+	height: 50px;
+	border-radius: 50%;
+	background-image: radial-gradient(rgba(255, 255, 255, 0.3) 60%, rgba(255, 255, 255, 1) 80%);
+	transform: translateX(-50%);
+	will-change: top, left;
+}
+
+.bubble::after {
+	content: '';
+	position: absolute;
+	top: 20%;
+	right: 25%;
+	width: 33%;
+	height: 33%;
+	border: 3px solid;
+	border-color: rgba(255, 255, 255, 0.8) transparent transparent transparent;
+	border-radius: 50%;
+	transform: rotate(45deg);
+}
+</style>
+
+</head>
+<body>
+	<div class='soda'></div>
+	<script src="js/paopao.js"></script>
+	<script>
+		for (let i = 0; i < 100; i++) {
+			new Bubble(document.querySelector(".soda"), i);
+		}
+	</script>
+</body>
+</html>
